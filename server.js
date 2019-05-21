@@ -6,7 +6,9 @@ const Nutrition = require('./models/nutrition')
 // Create server to serve index.html
 const app = express()
 const http = require('http').Server(app)
-const port = process.env.PORT || 3001
+const port = 3001
+require('dotenv').config()
+
 
 // Socket.io serverSocket
 const serverSocket = require('socket.io')(http)
@@ -20,9 +22,10 @@ http.listen(port, () => {
 })
 
 // Connect to mongo
-mongoose.connect('mongodb+srv://yoshonabee:race34923@cluster0-f0xig.gcp.mongodb.net/test?retryWrites=true', {
+mongoose.connect(process.env.URL, {
     useNewUrlParser: true
 })
+
 db = mongoose.connection
 
 db.on('error', error => {

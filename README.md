@@ -1,68 +1,45 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# whatUEat
 
-## Available Scripts
+<https://github.com/yoshonabee/midterm_whatUEat>
 
-In the project directory, you can run:
+### 簡介
 
-### `npm start`
+這是一個可以紀錄每天飲食營養成分的app，並可以查詢不同日期的飲食
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 操作方式
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+1. git clone https://github.com/yoshonabee/midterm_whatUEat
+2. cd midterm_whatUEat
+3. npm install
+4. 修改example.env中URL並存檔成檔名 ".env"
+5. node server.js
+6. npm start
+7. 打開 http://localhost://3000
 
-### `npm test`
+### App功能
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. 可按new來新增所吃的東西，並記錄卡路里、蛋白質、脂肪、碳水化合物、及鈉的攝取
+2. 可按previous/next week來切換目前所顯示的日期
+3. 可透過直接輸入日期來跳到特定的時間
+4. 可點進去主畫面中的紀錄查看該紀錄的細節及刪除
+5. 可自動統計當天各營養成分的總攝取量並顯示於下方
 
-### `npm run build`
+### 使用到的框架
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. 使用react.js編寫前端
+2. 使用express.js (node.js)來編寫後端
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+3. 使用Mongodb當作database
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 參考
 
-### `npm run eject`
+1. 後端的編寫參考老師的chatbox
+2. 前後端的連接參考 <https://medium.com/javascript-in-plain-english/full-stack-mongodb-react-node-js-express-js-in-one-simple-app-6cc8ed6de274>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### 貢獻
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* 除了create-react-app所自動新增的code以外，其他皆為自己完成，並參考上述兩點
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### 心得
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+覺得這次最大的難點在於前後端的連接。由於前端先前已經寫過許多次，用起來算是比較沒難度，但前後端的連接讓我花了不少時間在探索上，包含兩邊的溝通方式，以及前端多個物件共用一個socket的衝突。這個app還有許多可以擴充的功能，除了最基本的紀錄以外，還可以分析這樣的飲食習慣並給予一個健康分數、針對不同需求的人士個人化推薦飲食組合等等，若未來還有機會再重拾這個app，這些都是不錯的改進方向，另外UI的美化也是一個可以著重的點。

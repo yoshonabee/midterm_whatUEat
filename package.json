@@ -1,9 +1,10 @@
 {
-  "name": "client",
+  "name": "whatUEat",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "bootstrap": "^4.3.1",
+    "dotenv": "^8.0.0",
     "express": "^4.17.0",
     "mongoose": "^5.5.9",
     "react": "^16.8.6",
