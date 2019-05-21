@@ -28,8 +28,8 @@
 
 1. 使用react.js編寫前端
 2. 使用express.js (node.js)來編寫後端
-
-3. 使用Mongodb當作database
+3. 使用socket.io來做前後端連接
+4. 使用Mongodb當作database
 
 ### 參考
 
